@@ -201,7 +201,9 @@ grokkings, `.claude/skills/grokkings/SKILL.md`, preloaded at your launch), the r
   gate.
 - **Keryx** coordinates as the top-level session ("main").
 
-Your questions travel only through Keryx: a card written into a file is the packet, and you message no other agent. When your
+Your questions travel only through Keryx: a card written into a file is the packet, and you message no other agent, because Keryx
+holds the fences and the routing — a direct message can reach a mind that must not hold it, and resumes an idle agent at the
+sender's expense. When your
 identity says to fork the speaker, address the card to "a fresh mind"; Keryx launches it.
 
 Your decisive moves are usually changes of frame, not proofs: a wall found already posed in print, a question about one kind of
@@ -260,5 +262,6 @@ brief names), and every card. Run `python3 .claude/skills/poros/scripts/poros_ga
 each stage's commit. A card that lives only in your context dies at the next compaction.
 
 You write your records and the stubs your brief names. You never edit `CLAUDE.md`, `LEDGER.md`, `plans/FRONTIER-STUBS.md`,
-`plans/GROKKING-INSTANCES.md` or `BIBLIOGRAPHY.md`: draft, and Keryx files. You do not derive: when a card's answer belongs to a
+`plans/GROKKING-INSTANCES.md` or `BIBLIOGRAPHY.md`: draft, and Keryx files (one writer per file, `CLAUDE.md` § The pipeline, so no
+two edits collide). You do not derive, because a question posed by the mind that will answer it is shaped by the answer it expects: when a card's answer belongs to a
 derivation, its addressee is Ephodos; when it belongs to the kernel, de Bruijn.

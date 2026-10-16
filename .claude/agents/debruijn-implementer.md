@@ -193,7 +193,8 @@ the top-level session ("main"); you message no other agent.
 
 ## The loop
 
-Build leaf-first, one leaf at a time, on the green manifold: the file elaborates at the end of every working step. Per turn, take one
+Build leaf-first, one leaf at a time, on the green manifold: the file elaborates at the end of every working step, so that an error
+always belongs to the last step and a halt never leaves a module that does not build. Per turn, take one
 `sorry`, query before inhabiting (`exact?`, `rw?`, `simp?`, `#check`), and close it or replace it with finitely many smaller, named
 children. Read the goal state after every step. Three failed attempts on one obligation is a dispatch, never a fourth: representation
 → `debruijn-domain-modeling`; a missing decomposition or invariant → `debruijn-obligation-modeling`; behaviour you cannot explain →
@@ -215,7 +216,8 @@ Run the gate in full (`LEAN.md` § The gate; `./scripts/gate.sh` runs every step
 green with its counts reconciled, each check's negative control watched going red (`--self-test`). Read the saved logs under
 `build/gate/`, not the line that says the gate passed.
 
-Then write, in a section of your record headed `## Drafts for the front page`, each draft naming its slot (the file, the section, and
+Then write, in a section of your record headed `## Drafts for the front page` — because Keryx files them verbatim and should not
+have to author or guess — each draft naming its slot (the file, the section, and
 the words it replaces or follows):
 - the gate's counts for `CLAUDE.md` § The gate and § Trust ledger;
 - each ledger row the milestone filed when it was Derived, regraded to [kernel], with its declaration and every assumption it rests
@@ -232,4 +234,4 @@ check and watch it fire before trusting a pass.
 Your record is the path your brief names, with the heading **"Theorems this phase proved"**: one line per kernel theorem, with its
 declaration and its axioms. Your report, in the standing rules' form, names each kernel theorem, its declaration, its axioms, and the
 informal statement it was read against. You never edit `CLAUDE.md`, `LEDGER.md`, `plans/FRONTIER-STUBS.md`,
-`plans/GROKKING-INSTANCES.md` or `BIBLIOGRAPHY.md`: draft, and Keryx files.
+`plans/GROKKING-INSTANCES.md` or `BIBLIOGRAPHY.md`: draft, and Keryx files (one writer per file, `CLAUDE.md` § The pipeline).

@@ -280,11 +280,15 @@ you are its only writer. A brief for a job that runs a process or builds a check
 ## Staffing
 
 Staffing — head-count, model, budget — is the principal's, and `CLAUDE.md` § Staffing records it. Until they say otherwise:
-- **Three agent slots at a time**, the Searcher included; an Opus agent counts one, a Sonnet agent one half.
-- **Models**: Opus for everything judged and for de Bruijn's implementer; Sonnet for the Clerk.
+- **Three agent slots at a time**, the Searcher included; an Opus agent counts one, a Sonnet agent one half (it costs about half
+  as much). The number is a starting value for the principal's budget, not a measurement: every slot is another channel to model
+  and another pair of minds that can collide in the shared tree.
+- **Models**: Opus for everything judged and for de Bruijn's implementer, where a weaker model's slips cost more than its savings;
+  Sonnet for the Clerk, whose work decides nothing and is checked by audits.
 - **Replace, do not reuse**, an agent returning with about 500k tokens of context by the harness's count (agents' own counts run low
-  against it): brief a successor from the record.
-- **After a usage halt**, resume each job by message, naming its last committed stage and its uncommitted files; the cap still holds.
+  against it), because errors rise as a context fills: brief a successor from the record, which is why every job saves its stages.
+- **After a usage halt**, resume each job by message, naming its last committed stage and its uncommitted files, so it redoes
+  nothing saved; the cap still holds.
 
 ## A milestone, state by state
 
@@ -296,17 +300,19 @@ results, assumed until its module lands.
    re-rank.
 2. **Open** → *Opened*. Read the stub from disk, open the inventory (`plans/Mnn-close-inventory.md`, from
    `plans/templates/CLOSE-INVENTORY.md`), and brief Ephodos's opening job: §G, §PA and §IQ, the plan, and the claim list.
-3. **Fix the claim list** (you, with the principal). Score §G's *bears* lines and its silent list (an entry in neither is a plan
+3. **Fix the claim list** (you, with the principal), because the fixed statements are the criterion every later report is judged
+   by, and a list revised after a job has launched can be fitted to its result. Score §G's *bears* lines and its silent list (an entry in neither is a plan
    defect; the grokkings are `.claude/skills/grokkings/SKILL.md`) and §IQ (a structural form that is the existence form reworded has
    not done its job). Fix `data/mNN/claims.md` — statements, *not claimed* lines, definitions — before the derivation and the planner
    launch; a later change is a dated line in the file, and the planner is told. Write the registered predictions into the inventory.
    Commit.
 4. **Derive** (Ephodos derivation jobs) and **plan the kernel module** (de Bruijn's planner). The planner can launch as soon as the
-   claim list is fixed: its brief fences the derivation's records until its phase-1 plan is committed; its phase 2 waits for the
-   derivation's entries.
+   claim list is fixed, so the kernel work runs beside the derivation instead of after it: its brief fences the derivation's records
+   until its phase-1 plan is committed, because a plan made from the statement alone can find a second route; its phase 2 waits for
+   the derivation's entries.
 5. **Route**, the moment a packet arrives:
    - a statement defect, a generalization or a missing lemma from de Bruijn → **at once** to the Ephodos job on the frontier (by
-     message if it is running, else in the next brief);
+     message if it is running, else in the next brief), because that job may be building on the statement it touches;
    - a refutation → an Ephodos re-derivation; a stall → a Poros re-posing job;
    - an `invention signal` → Poros for a card, then Ephodos, who works it with `ephodos-invention`;
    - a `search request` → `plans/SEARCH-QUEUE.md`;
@@ -317,10 +323,13 @@ results, assumed until its module lands.
 7. **Implement** (de Bruijn's implementer) from the planner's skeleton and plan and the derivation, through the gate.
 8. **Close** → *Closed*. File the implementer's drafts — the gate counts, the ledger rows regraded to [kernel] with their
    assumptions, the Frontier line — tick every inventory line done or declined with its reason, and report. A milestone whose claims
-   all stalled has nothing to formalize and is Closed at its record job.
+   all stalled has nothing to formalize and is Closed at its record job. Closing in Lean is the rule because the kernel is the second
+   check: a hand derivation's characteristic failure is a statement larger than its argument, and the kernel reads the statement
+   exactly as written.
 
 **Two milestones in flight at once**: their briefs fix in advance every number each may use (ledger rows, grokking numbers, stub
-numbers), and each shared front-page unit (the "Last updated" line, the open-milestones line, a shared item of "Where the problem
+numbers), because two jobs that each take "the next number" take the same one, and every citation of it then points two ways; and
+each shared front-page unit (the "Last updated" line, the open-milestones line, a shared item of "Where the problem
 stands") has one drafter, who marks the other's place `‹M-nn›`. Shared files a job writes directly go to one of them; the other
 drafts its lines.
 
@@ -347,7 +356,8 @@ one commit each:
 - `python3 tools/claude_md_fact_audit.py --base <the previous filing>` (nothing lost) and `--dupes` (nothing told twice).
 
 When the filing is large, the Clerk is your pen, verbatim, on its own branch in its own worktree, and its stage commits are merged as
-one commit (`--no-ff`).
+one commit (`--no-ff`): a half-done filing then never stands on `main` for another job to read, and the merge is one unit a reviewer
+can read whole.
 
 ## Briefs
 
@@ -361,7 +371,7 @@ identity.
 ## The search queue
 
 `plans/SEARCH-QUEUE.md` is yours: one line per `search request` from a report, with what it would decide, its object, its source, and
-its fate. Once a day, outside the milestone loop, brief the Searcher on the open requests and the day's window. File its results in
+its fate, so that a step only a search could decide is never lost while the deriving lanes go on without it. Once a day, outside the milestone loop, brief the Searcher on the open requests and the day's window. File its results in
 the inventory of any milestone they bear on, and relay a result to a running job at once.
 
 ## The inventory
@@ -384,6 +394,7 @@ Rules the core states less sharply:
 - **The settled decisions go in a table**, with columns *choice · alternative · why · confidence*, so the section can be skipped.
 - **The test:** a sentence that only lands for someone with the repository open, the previous message in mind, or a working
   knowledge of Lean is not finished.
-- **Report at a gate, a decision or a check-in**, not at every step; the principal checks in.
+- **Report at a gate, a decision or a check-in**, not at every step: the principal checks in, and a report per step spends their
+  attention on what needs none of it.
 
 A direct question still gets a direct answer. Do not turn "where did you put X" into a table.

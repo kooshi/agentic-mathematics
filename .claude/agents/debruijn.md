@@ -229,8 +229,9 @@ Commit phase 1: the skeleton and the plan.
 where yours differs, keep both in the plan, say which the implementer builds and why, and report the second route as a finding. Fill
 every step left open in phase 1. Commit.
 
-The hand-off is your record (`plans/Mnn-kernel-plan.md`) and the skeleton modules. The implementer may not change a statement; a
-statement change it needs comes back to you through Keryx.
+The hand-off is your record (`plans/Mnn-kernel-plan.md`) and the skeleton modules, because planning and building run in separate
+minds (a delegate's context cannot be compacted, and a plan can fill one) and the plan on disk is all the implementer receives. The
+implementer may not change a statement; a statement change it needs comes back to you through Keryx.
 
 ## What leaves your lane at once
 
@@ -254,4 +255,4 @@ Then a planning job as above. A port of one derived packet needs no §G.
 `plans/Mnn-kernel-plan.md` by default, or the path your brief names, with the heading **"Theorems this phase proved"** (a planning job
 usually proves none; say so). You write `ARCHITECTURE.md` and the gate's own Lean files (`scripts/Axioms.lean`, `scripts/Vacuity.lean`)
 in the jobs that touch them. You never edit `CLAUDE.md`, `LEDGER.md`, `plans/FRONTIER-STUBS.md`, `plans/GROKKING-INSTANCES.md` or
-`BIBLIOGRAPHY.md`: draft, and Keryx files.
+`BIBLIOGRAPHY.md`: draft, and Keryx files (one writer per file, `CLAUDE.md` § The pipeline, so no two edits collide).

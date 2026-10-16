@@ -296,7 +296,8 @@ You reason from them.
 - **de Bruijn** plans and builds the Lean module from your statements: its planner works first from your claim list alone, then reads
   your derivation. **The kernel is the second check**: no blind verifier runs in the standard workflow, and a milestone is Closed
   only when its Lean module passes the gate.
-- **Keryx** coordinates as the top-level session ("main"). Every arrow passes through it; you message no other agent.
+- **Keryx** coordinates as the top-level session ("main"). Every arrow passes through it; you message no other agent, because
+  Keryx holds the fences and the routing, and a direct message can reach a mind that must not hold it.
 
 A milestone moves through four states: **Not started** (a stub), **Opened** (your opening job), **Derived** (your record job filed),
 **Closed** (its Lean module passes the gate). Once a milestone is Derived, the next may open on its results, assumed until their
@@ -471,4 +472,5 @@ section of `BIBLIOGRAPHY.md`: a key already defined, or a row that would change 
 - **§PA**: recognitions about what the object *is*, each promoted to a drafted grokking or a stub.
 - **The plan**: grep for "conjecture" and "not claimed"; for each hit, a stub or an explicit decline.
 
-Poros re-ranks the frontier at its next question job. You do not.
+Poros re-ranks the frontier at its next question job. You do not: ranking is the ask lane's, and a deriver ranking the successors of
+its own milestone ranks by what it just did.

@@ -365,7 +365,8 @@ because plans' tables are priced from priors (§ Counter-priors); grep Mathlib b
 Audited at every milestone by `./scripts/axioms.sh`, which reads every declaration of the library and checks each one's axioms as a
 set (`LEAN.md` § Trust ledger). The counts it last recorded — `scripts/gate_report.py` compares each run against this line, and
 `tools/claude_md_fact_audit.py` fails if the line disappears:
-`axiom audit: clean=0 imported=0 purchased=0 axiom-free=0` ‹refiled by the implementer's drafts at each close›.
+`axiom audit: clean=1 imported=0 purchased=0 axiom-free=1` (the example module; refiled from the implementer's drafts at each
+close).
 
 Declared outside theorems and purchases: ‹none›. Each is listed in `ARCHITECTURE.md` § Trust and carries the four items of `LEAN.md`
 § Assumptions. Hand results of ours enter as hypotheses, never axioms, so that they disappear when discharged.
@@ -407,8 +408,8 @@ The Lean gate — the build, zero `sorry`, the axiom audit, linters, spec exampl
 `LEAN.md` § The gate; `./scripts/gate.sh` runs every step in order. Its recorded state stays here, where `scripts/gate_report.py`
 reads it. The vacuity scan's **counts** — a silent change in them is this gate's own failure mode, because a scan that stopped seeing
 part of the library still prints a plausible report:
-`vacuity: declarations=0 refutations-skipped=0 sites=0 vacuous=0 stale=0 declared=0 witnessed=0 generic=0 unknown=0`
-‹refiled at each close›. The baseline (`scripts/vacuity-baseline.txt`) holds no entry.
+`vacuity: declarations=6 refutations-skipped=0 sites=0 vacuous=0 stale=0 declared=0 witnessed=0 generic=0 unknown=0`
+(the example module, with no tracked carrier yet; refiled at each close). The baseline (`scripts/vacuity-baseline.txt`) holds no entry.
 
 ### Make the gate fail, and watch it fail
 
