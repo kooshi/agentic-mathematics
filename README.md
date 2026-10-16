@@ -141,8 +141,8 @@ agents' and its principal's.
 
 ## A worked example (from the project where the method was built)
 
-> *This section is the only place this repository mentions a particular problem.* The method was built in **lean-dir**
-> (`<lean-dir public URL>`), a Lean 4 workspace aimed at the Hadwiger–Nelson problem: how many colours the plane needs so that no
+> *This section is the only place this repository mentions a particular problem.* The method was built in
+> **[hadwiger-nelson](https://github.com/kooshi/hadwiger-nelson)**, a Lean 4 workspace aimed at the Hadwiger–Nelson problem: how many colours the plane needs so that no
 > two points at distance exactly 1 share a colour. There the pipeline ran milestone after milestone from the question's classical
 > bounds to a library that kernel-checks the interval 5 ≤ χ(ℝ²) ≤ 7 on Lean's standard three axioms, together with a body of
 > derived and kernel-checked results about the problem's algebraic and measurable forms. Its `CLAUDE.md`, ledger, grokkings and
