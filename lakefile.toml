@@ -1,0 +1,26 @@
+name = "proofs"
+defaultTargets = ["Proofs"]
+
+# `lake lint` is the gate's linter step (LEAN.md § The gate). Batteries ships the driver and arrives through Mathlib;
+# `Proofs` is the library to lint. A gate step with no driver configured errors rather than passing, which is the point.
+lintDriver = "batteries/runLinter"
+lintDriverArgs = ["Proofs"]
+
+# A typo'd identifier must be an error, never a silently introduced implicit argument that makes a wrong statement elaborate.
+[leanOptions]
+autoImplicit = false
+relaxedAutoImplicit = false
+
+# Every public declaration carries a docstring, because a theorem's docstring is where its informal claim, its sources and its
+# assumptions are read. It warns, and does not fail `lake build`; `lake lint` above is the failing gate.
+linter.missingDocs = true
+
+# Mathlib pinned to the release tag matching ./lean-toolchain (v4.32.0), so `lake exe cache get` restores the prebuilt .olean files
+# instead of building Mathlib from source (hours). Bump this rev and lean-toolchain together, alone, in a labeled commit.
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.32.0"
+
+[[lean_lib]]
+name = "Proofs"

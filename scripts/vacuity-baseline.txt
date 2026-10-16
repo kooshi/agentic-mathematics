@@ -1,0 +1,5 @@
+# Vacuity baseline — every UNKNOWN site not yet resolved, one line each, as the scan prints it ("UNKNOWN <declaration>").
+# The gate fails on any UNKNOWN not listed here, and on any line here that is no longer UNKNOWN: this file only ever SHRINKS, and
+# its target is EMPTY. VACUOUS and STALE can never be listed: they fail the gate outright, and deliberate emptiness is declared in
+# the declaration's own docstring (VACUITY DECLARED:) rather than suppressed here. Each entry carries its reason on the comment
+# line above it. Regenerate only deliberately: ./scripts/vacuity.sh --baseline, then read the difference.
