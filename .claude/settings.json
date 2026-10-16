@@ -1,0 +1,13 @@
+{
+  "outputStyle": "keryx",
+  "skillOverrides": {
+    "keryx": "user-invocable-only",
+    "poros": "user-invocable-only",
+    "ephodos": "user-invocable-only",
+    "debruijn": "user-invocable-only"
+  },
+  "env": {
+    "CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH": "1",
+    "TZ": "UTC"
+  }
+}

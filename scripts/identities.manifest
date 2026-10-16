@@ -1,0 +1,33 @@
+# The vendored skills, one line per file: its SHA-256, then its path. Written by `scripts/identities.py record`
+# or `sync --from`; never edited by hand. `scripts/identities.py check` fails on any difference.
+
+342903d4ad310f7774f12c1581407e398793d170abce0845477abef633ee58cc  .claude/skills/debruijn-debugging/SKILL.md
+d7e3e1dad701c421c538691185dcac3b2c9c177f78d4e73434218644e5f32b9c  .claude/skills/debruijn-domain-modeling/SKILL.md
+f24f2d48936f14952de1555da483ab75d02a3b4a47a9cb6e52146b8e4d4b8b4e  .claude/skills/debruijn-experience-modeling/SKILL.md
+51d289d60496f9912ad1328db9dd6b231aaf7062dbf094a922143f5a611a14f2  .claude/skills/debruijn-init/SKILL.md
+3fbc108ad44906b4b76237ef501ad5b99b58fe07d6eb6bb07ea132f410b54d0b  .claude/skills/debruijn-meta/SKILL.md
+15f3eed04011e0e51f23a483eb8349b2899f5b5855b4e2857f8466df0838d87b  .claude/skills/debruijn-obligation-modeling/SKILL.md
+9adefaa0b26594ea1c375aacacb19131ffd9d14152e437c701aacbc7af3fea6d  .claude/skills/debruijn/SKILL.md
+053af09d65c1fb59f258e7c80cf50d65e728eb8048a6ed4f0002fcab20813769  .claude/skills/decompress/SKILL.md
+7002ed25ee45dd1b444314b255b4b721521d8630d0f20f760656bddbf9c43416  .claude/skills/ephodos-invention/SKILL.md
+ec46b30e5ba7508b1b12403cc8f845260cbb4a87866a1012fc3344a4f2c94d99  .claude/skills/ephodos-recognition/SKILL.md
+4a065009cfba903940aa54d63a1c2ab92932052304303f0651c8b801f300a125  .claude/skills/ephodos-verification/SKILL.md
+5e68076f325fc4245bb605739d6d9e399c6546f65afdb539c022b96708acd759  .claude/skills/ephodos/SKILL.md
+b97ebf71a17e88b11a8708641bb21782fe4d7e2962b47b4b4cdfca6afa792f10  .claude/skills/ephodos/scripts/derive_gate.py
+4538c88516ad7d4e79135fc0a80275d2b7816fea19f53b353a6c10d881d54f06  .claude/skills/ephodos/scripts/example-clean.md
+fab04bb3434df8898183d66d7709c4a6e5d40e381ff6213be351b866f627f7bf  .claude/skills/ephodos/scripts/example-dirty.md
+aeee46255f4e78798e671e48697853479ec8ff9ebd7834815f10f35acf137c84  .claude/skills/ephodos/scripts/example-invention.md
+d9b807e57ff676d0a8a53b33ce89e8d85641046794011ee88ea882bbd335a9ec  .claude/skills/ephodos/scripts/example-verification.md
+b2ec86eff1a6fcc00912c18e812c2851c6a4a19e671eddde1d71df642dec2d2f  .claude/skills/keryx/SKILL.md
+8ec5acc04d5ba60b25b3831ccf6df0633bc21d2ff18ed2c9e2ca1e286b5162e0  .claude/skills/keryx/scripts/brief_gate.py
+e304986079944dc56c2ce5eb177082b26c883b529eb60c539d767ea4881b4c93  .claude/skills/keryx/scripts/example-brief.md
+07968999b25bc17b5aa181932e2335ae90497905a44f49dbccd2a40bc47e395b  .claude/skills/keryx/scripts/example-dirty.md
+b5bb3980f463841c785b0fa2e529f613483752dd43061dd94f3854070923d276  .claude/skills/keryx/scripts/example-source.md
+e5e528fe0600cc7d564bfa372434f7af870aa6d58d3227226224c4df3c75a139  .claude/skills/keryx/scripts/standing-rules.md
+14fc7663fa5e559308738679f9e846e59f108e367674bb929b97ae8ec864cb6a  .claude/skills/peer-delegation/SKILL.md
+d4fd32cd011f034e2fa244edd06888c9338469cbe7cdf55ac5b14d2f5db28a36  .claude/skills/poros-anomaly-hunt/SKILL.md
+8e513e670872a3781093431eb6996cf6f6afc73923b23ad981a1b239d4c51efd  .claude/skills/poros-reframing/SKILL.md
+28f7c6815b8f0f717c4ab87cc5b4c0f736507308767db0e21bda5e0786f444d2  .claude/skills/poros/SKILL.md
+3c0e9723b1ffa2a9f0614ab4badf094cc1b7b86252b0e1a5b1885444a7c5ba36  .claude/skills/poros/scripts/example-clean.md
+d9e21d02ff6ab4fe9e44ac53182a2ca8c2e2308d81889937e75e349fd830338a  .claude/skills/poros/scripts/example-dirty.md
+e5bf0a3735998dc6fec544645059ff9519b14f8dc1f0bf221e838126422160a3  .claude/skills/poros/scripts/poros_gate.py
